@@ -1,0 +1,116 @@
+.todolistcontainer{
+  width: 600px;
+  height: 700px;
+  position: relative;
+  margin: 20px auto;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px #888;
+  padding-bottom: 40px;
+  padding-top: 40px;
+
+}
+
+
+.todolistcontainer::before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background-color: rgba(255,0,0,0.6);
+  position: absolute;
+  top: 0;
+  left: 15%;
+}
+
+.pattern {
+  height: 100%;
+  background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+}
+
+#content {
+  padding-top: 10px;
+  padding-left: 17%;
+  padding-right: 16px;
+  line-height: 25px;
+  font-size: 19px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+
+.to-do-list-heading{
+  font-family: 'Architects Daughter', cursive;
+  margin: -25px 0 0;
+  line-height: 40px;
+}
+
+.action-buttons-container {
+  display: flex;
+}
+.action-buttons-container > button {
+  display: block;
+  background: transparent;
+  height: 25px;
+  line-height: 20px;
+  font-family: 'Architects Daughter', cursive;
+  text-transform: uppercase;
+  margin-right: 15px;
+  margin-bottom: 25px;
+}
+
+.todo-task-item{
+  min-height: 25px;
+  line-height: 25px;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.todo-task-item button{
+  background: transparent;
+  border: 0;
+}
+
+.todo-task-item .uncheck, .todo-task-item.completed .mark-off{
+  display: none;
+}
+
+.todo-task-item.completed .uncheck{
+  display: inline-block;
+}
+
+.todo-task-item.completed{
+  text-decoration: line-through;
+}
+
+#new-task-form-container button{
+  line-height: 25px;
+  background-color: transparent;
+  border: 0;
+}
+
+#new-task-form-container input{
+  line-height: 25px;
+  font-size: 19px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  width: 90%;
+  font-family: 'Architects Daughter', cursive;
+}
+
+input:focus, textarea:focus, select:focus, button:focus{
+  outline: none;
+}
+
+
+
+@media only screen and (max-width: 768px){
+  html, body, #root, .App, .app-wrapper {
+    height: 100%;
+  }
+
+  .todolistcontainer{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0;
+  }
+}
+
